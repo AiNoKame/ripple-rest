@@ -3,8 +3,11 @@ var https   = require('https');
 var path    = require('path');
 var app = require(__dirname+'/lib/express_app.js');
 var config = require(__dirname+'/lib/config-loader');
+var remote = require(__dirname+'/lib/remote.js');
 
 require('rconsole');
+
+remote.connect();
 
 console.set({
   facility:        'local7',
